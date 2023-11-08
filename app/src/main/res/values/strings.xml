@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="name">Courtlyn Boykin</string>
+    <string name="title">Software Engineering Apprentice</string>
+    <string name="company">Google</string>
+    <string name="team">Android DevRel</string>
+    <string name="linkedin">linkedin.com/in/courtlynboykin</string>
+    <string name="github">github.com/courtlynb</string>
+    <string name="email">boykin.courtlyn@gmail.com</string>
+</resources>
