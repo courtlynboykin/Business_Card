@@ -30,7 +30,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.businesscard.ui.theme.BusinessCardTheme
-
+import com.example.businesscard.ui.theme.body1
 
 
 class MainActivity : ComponentActivity() {
@@ -102,22 +102,20 @@ private fun PersonalInfo(
             text = name,
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
-            modifier = modifier
-                .padding(top = 15.dp)
+            modifier = modifier.padding(top = 15.dp)
         )
         Text(
             text = title,
             color = Color(0xFF073b3a),
-            fontWeight = FontWeight.Bold,
-            modifier = modifier
+            fontWeight = FontWeight.Bold
         )
         Text(
             text = company,
+            style = body1,
             modifier = modifier.padding(vertical = 5.dp)
         )
         Text(
-            text = team,
-            modifier = modifier
+            text = team
         )
     }
 }
@@ -140,19 +138,17 @@ private fun ContactInfo(
             )
     ) {
         Row(
-            modifier = modifier
-                .padding(vertical = 4.dp)
+            modifier = modifier.padding(vertical = 4.dp)
         ) {
             Icon(
                 Icons.Rounded.Person,
                 contentDescription = null,
                 tint = Color(0xFF006d3b),
-                modifier = modifier
-                    .padding(horizontal = 10.dp)
+                modifier = modifier.padding(horizontal = 10.dp)
             )
             Text(
                 text = linkedin,
-                modifier = modifier
+                style = body1
 
             )
         }
@@ -169,23 +165,21 @@ private fun ContactInfo(
             )
             Text(
                 text = github,
-                modifier = modifier
+                style = body1
             )
         }
         Row(
-            modifier = modifier
-                .padding(vertical = 4.dp)
+            modifier = modifier.padding(vertical = 4.dp)
         ) {
             Icon(
                 Icons.Rounded.Email,
                 contentDescription = null,
                 tint = Color(0xFF006d3b),
-                modifier = modifier
-                    .padding(horizontal = 10.dp)
+                modifier = modifier.padding(horizontal = 10.dp)
             )
             Text(
                 text = email,
-                modifier = modifier
+                style = body1
             )
         }
     }
