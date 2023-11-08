@@ -23,11 +23,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.businesscard.ui.theme.BusinessCardTheme
 
 class MainActivity : ComponentActivity() {
@@ -77,18 +81,20 @@ private fun PersonalInfo(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
             .padding(
-                vertical = 100.dp,
-                horizontal = 150.dp
+                start = 50.dp,
+                top = 150.dp,
+                end = 50.dp
             )
     ){
         Image(
             painter = image,
             contentDescription = null,
             modifier = modifier
-                .size(150.dp)
+                .padding(horizontal = 75.dp)
         )
         Text(
             text = name,
+            fontSize = 32.sp,
             modifier = modifier
         )
         Text(
@@ -114,32 +120,55 @@ private fun ContactInfo(
     modifier: Modifier = Modifier
 ) {
     Column (
-        verticalArrangement = Arrangement.Bottom
-    ){
-        Row {
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.Start,
+        modifier = modifier
+            .fillMaxSize()
+            .padding(
+                start = 50.dp,
+                top = 440.dp
+            )
+    ) {
+        Row (
+            modifier = modifier
+                .padding(vertical = 4.dp)
+        ) {
             Icon(
                 Icons.Rounded.Person,
-                contentDescription = null
+                contentDescription = null,
+                modifier = modifier
+                    .padding(horizontal = 10.dp)
             )
             Text(
                 text = linkedin,
                 modifier = modifier
+
             )
         }
-        Row {
+        Row (
+            modifier = modifier
+                .padding(vertical = 4.dp)
+        ) {
             Icon(
                 Icons.Rounded.CheckCircle,
-                contentDescription = null
+                contentDescription = null,
+                modifier = modifier
+                    .padding(horizontal = 10.dp)
             )
             Text(
                 text = github,
                 modifier = modifier
             )
         }
-        Row {
+        Row (
+            modifier = modifier
+                .padding(vertical = 4.dp)
+        ) {
             Icon(
                 Icons.Rounded.Email,
-                contentDescription = null
+                contentDescription = null,
+                modifier = modifier
+                    .padding(horizontal = 10.dp)
             )
             Text(
                 text = email,
